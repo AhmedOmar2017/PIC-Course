@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.36 build 20220127204148 
-                                                                                               Sun Jul 10 18:35:07 2022
+                                                                                               Sun Jul 10 18:54:28 2022
 
 Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1 
      1                           	processor	16F877A
@@ -306,17 +306,17 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
    292  0793  07F5               	addwf	main@i,f
    293  0794                     l620:
    294                           
-   295                           ;main.c: 34:             _delay((unsigned long)((100)*(4000000/4000.0)));
-   296  0794  3082               	movlw	130
+   295                           ;main.c: 34:             _delay((unsigned long)((50)*(4000000/4000.0)));
+   296  0794  3041               	movlw	65
    297  0795  00F1               	movwf	??_main+1
-   298  0796  30DD               	movlw	221
+   298  0796  30EE               	movlw	238
    299  0797  00F0               	movwf	??_main
    300  0798                     u77:
    301  0798  0BF0               	decfsz	??_main,f
    302  0799  2F98               	goto	u77
    303  079A  0BF1               	decfsz	??_main+1,f
    304  079B  2F98               	goto	u77
-   305  079C  2F9D               	nop2
+   305  079C  0000               	nop
    306  079D                     l622:
    307                           
    308                           ;main.c: 35:             if(i == 4) i = 0;
@@ -398,17 +398,17 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
    384  07D0  07F6               	addwf	main@i_38,f
    385  07D1                     l640:
    386                           
-   387                           ;main.c: 45:             _delay((unsigned long)((100)*(4000000/4000.0)));
-   388  07D1  3082               	movlw	130
+   387                           ;main.c: 45:             _delay((unsigned long)((50)*(4000000/4000.0)));
+   388  07D1  3041               	movlw	65
    389  07D2  00F1               	movwf	??_main+1
-   390  07D3  30DD               	movlw	221
+   390  07D3  30EE               	movlw	238
    391  07D4  00F0               	movwf	??_main
    392  07D5                     u97:
    393  07D5  0BF0               	decfsz	??_main,f
    394  07D6  2FD5               	goto	u97
    395  07D7  0BF1               	decfsz	??_main+1,f
    396  07D8  2FD5               	goto	u97
-   397  07D9  2FDA               	nop2
+   397  07D9  0000               	nop
    398  07DA                     l642:
    399                           
    400                           ;main.c: 46:             if(i == 4) i = 0;
@@ -591,7 +591,7 @@ DATA                 0      0       0      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.36 build 20220127204148 
-Symbol Table                                                                                   Sun Jul 10 18:35:07 2022
+Symbol Table                                                                                   Sun Jul 10 18:54:28 2022
 
                      l11 0782                       u20 07A3                       u21 07A2  
                      u30 07AE                       u14 0789                       u31 07AD  

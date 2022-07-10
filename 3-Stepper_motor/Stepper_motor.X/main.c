@@ -31,7 +31,7 @@ void main(void) {
         {
             PORTB = (1 << i);
             i++;
-            __delay_ms(100);
+            __delay_ms(50); //if you want to contral the speed reduce the delay time 
             if(i == 4) i = 0;
             
         }
@@ -42,7 +42,7 @@ void main(void) {
         {
             PORTB = (8>>i);
             i++;
-            __delay_ms(100);
+            __delay_ms(50);    //if you want to contral the speed reduce the delay time 
             if(i == 4) i = 0;
             
         }

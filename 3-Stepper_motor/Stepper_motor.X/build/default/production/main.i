@@ -1898,7 +1898,7 @@ void main(void) {
         {
             PORTB = (1 << i);
             i++;
-            _delay((unsigned long)((100)*(4000000/4000.0)));
+            _delay((unsigned long)((50)*(4000000/4000.0)));
             if(i == 4) i = 0;
 
         }
@@ -1909,7 +1909,7 @@ void main(void) {
         {
             PORTB = (8>>i);
             i++;
-            _delay((unsigned long)((100)*(4000000/4000.0)));
+            _delay((unsigned long)((50)*(4000000/4000.0)));
             if(i == 4) i = 0;
 
         }

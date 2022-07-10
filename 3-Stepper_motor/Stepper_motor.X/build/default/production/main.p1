@@ -247,8 +247,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 33:             i++;
 [e ++ _i -> -> 1 `i `uc ]
 "34
-[; ;main.c: 34:             _delay((unsigned long)((100)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 34:             _delay((unsigned long)((50)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "35
 [; ;main.c: 35:             if(i == 4) i = 0;
 [e $ ! == -> _i `i -> 4 `i 102  ]
@@ -284,8 +284,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 44:             i++;
 [e ++ _i -> -> 1 `i `uc ]
 "45
-[; ;main.c: 45:             _delay((unsigned long)((100)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 45:             _delay((unsigned long)((50)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "46
 [; ;main.c: 46:             if(i == 4) i = 0;
 [e $ ! == -> _i `i -> 4 `i 106  ]
