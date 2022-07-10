@@ -9,6 +9,7 @@
 #include <xc.h>
 #include "config.h"
 #define _XTAL_FREQ  4000000
+// #include <pic16f877a.h>          // for educational porpuse 
 
 void main(void) {
     TRISBbits.TRISB0 = 0; // OUTPUT 
