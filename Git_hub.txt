@@ -1,7 +1,0 @@
-1-  git remote add origin https://github.com/AhmedOmar2017/<repositary>.git
-2-  git branch -m master <BRANCH>
-3-  git fetch origin
-4-  git branch -u origin/<BRANCH> <BRANCH>
-5-  git remote set-head origin -a
-6-  git pull --rebase origin master
-7-  git push <name branch> <name file>
