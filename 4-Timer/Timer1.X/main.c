@@ -27,8 +27,10 @@ void main(void)
     GIE     = 1;
     /*Configration timer module to operate  Timer mode */ 
    
-    // clear the timer register to start configration form zero
+    // set count from zero
     TMR1 = 0;
+    // set count from 15536
+    TMR1 = 15536;
     // select the local clock as TMR clock source
     TMR1CS = 0;
     // set the pre-scale 1:1
@@ -47,8 +49,9 @@ void __interrupt() ISR (void)
 {
     if(TMR1IF)
     {
+        TMR1 = 15536;
         count++; 
-        if (count == 15)
+        if (count == 20)
         {
             RB0 = ~RB0;
             count = 0;

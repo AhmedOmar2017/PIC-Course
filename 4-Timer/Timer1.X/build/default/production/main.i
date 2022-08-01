@@ -1899,6 +1899,8 @@ void main(void)
 
     TMR1 = 0;
 
+    TMR1 = 15536;
+
     TMR1CS = 0;
 
     T1CKPS0 = 0;
@@ -1916,8 +1918,9 @@ void __attribute__((picinterrupt(("")))) ISR (void)
 {
     if(TMR1IF)
     {
+        TMR1 = 15536;
         count++;
-        if (count == 15)
+        if (count == 20)
         {
             RB0 = ~RB0;
             count = 0;

@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.36 build 20220127204148 
-                                                                                               Mon Aug 01 02:22:55 2022
+                                                                                               Mon Aug 01 02:51:46 2022
 
 Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1 
      1                           	processor	16F877A
@@ -205,7 +205,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
    191                           
    192  0010                     __end_of__initialization:
    193  0010  0183               	clrf	3
-   194  0011  120A  118A  282F   	ljmp	_main	;jump to C main() function
+   194  0011  120A  118A  2833   	ljmp	_main	;jump to C main() function
    195                           
    196                           	psect	bssCOMMON
    197  0073                     __pbssCOMMON:
@@ -227,7 +227,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
    213  0073                     ??_main:
    214                           
    215                           	psect	maintext
-   216  002F                     __pmaintext:	
+   216  0033                     __pmaintext:	
    217                           ; 1 bytes @ 0x3
    218 ;;
    219 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
@@ -261,213 +261,227 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
    247 ;; This function uses a non-reentrant model
    248 ;;
    249                           
-   250  002F                     _main:	
+   250  0033                     _main:	
    251                           ;psect for function _main
    252                           
-   253  002F                     l631:	
+   253  0033                     l631:	
    254                           ;incstack = 0
    255                           ; Regs used in _main: [status,2]
    256                           
    257                           
    258                           ;main.c: 21:     TRISB0 = 0;
-   259  002F  1683               	bsf	3,5	;RP0=1, select bank1
-   260  0030  1303               	bcf	3,6	;RP1=0, select bank1
-   261  0031  1006               	bcf	6,0	;volatile
+   259  0033  1683               	bsf	3,5	;RP0=1, select bank1
+   260  0034  1303               	bcf	3,6	;RP1=0, select bank1
+   261  0035  1006               	bcf	6,0	;volatile
    262                           
    263                           ;main.c: 23:     RB0 = 0;
-   264  0032  1283               	bcf	3,5	;RP0=0, select bank0
-   265  0033  1303               	bcf	3,6	;RP1=0, select bank0
-   266  0034  1006               	bcf	6,0	;volatile
+   264  0036  1283               	bcf	3,5	;RP0=0, select bank0
+   265  0037  1303               	bcf	3,6	;RP1=0, select bank0
+   266  0038  1006               	bcf	6,0	;volatile
    267                           
    268                           ;main.c: 25:     TMR1IE = 1;
-   269  0035  1683               	bsf	3,5	;RP0=1, select bank1
-   270  0036  1303               	bcf	3,6	;RP1=0, select bank1
-   271  0037  140C               	bsf	12,0	;volatile
+   269  0039  1683               	bsf	3,5	;RP0=1, select bank1
+   270  003A  1303               	bcf	3,6	;RP1=0, select bank1
+   271  003B  140C               	bsf	12,0	;volatile
    272                           
    273                           ;main.c: 26:     PEIE = 1;
-   274  0038  170B               	bsf	11,6	;volatile
+   274  003C  170B               	bsf	11,6	;volatile
    275                           
    276                           ;main.c: 27:     GIE = 1;
-   277  0039  178B               	bsf	11,7	;volatile
-   278  003A                     l633:
+   277  003D  178B               	bsf	11,7	;volatile
+   278  003E                     l633:
    279                           
    280                           ;main.c: 31:     TMR1 = 0;
-   281  003A  1283               	bcf	3,5	;RP0=0, select bank0
-   282  003B  1303               	bcf	3,6	;RP1=0, select bank0
-   283  003C  018E               	clrf	14	;volatile
-   284  003D  018F               	clrf	15	;volatile
-   285  003E                     l635:
+   281  003E  1283               	bcf	3,5	;RP0=0, select bank0
+   282  003F  1303               	bcf	3,6	;RP1=0, select bank0
+   283  0040  018E               	clrf	14	;volatile
+   284  0041  018F               	clrf	15	;volatile
+   285  0042                     l635:
    286                           
-   287                           ;main.c: 33:     TMR1CS = 0;
-   288  003E  1090               	bcf	16,1	;volatile
-   289  003F                     l637:
-   290                           
-   291                           ;main.c: 35:     T1CKPS0 = 0;
-   292  003F  1210               	bcf	16,4	;volatile
-   293  0040                     l639:
-   294                           
-   295                           ;main.c: 36:     T1CKPS1 = 0;
-   296  0040  1290               	bcf	16,5	;volatile
-   297  0041                     l641:
-   298                           
-   299                           ;main.c: 38:     TMR1ON = 1;
-   300  0041  1410               	bsf	16,0	;volatile
-   301  0042                     l29:	
-   302                           ;main.c: 40:     while(1)
-   303                           
-   304  0042                     l30:	
-   305                           ;main.c: 41:     {;main.c: 42:     }
-   306                           
-   307  0042  2842               	goto	l29
-   308  0043  120A  118A  280C   	ljmp	start
-   309  0046                     __end_of_main:
+   287                           ;main.c: 33:     TMR1 = 15536;
+   288  0042  303C               	movlw	60
+   289  0043  008F               	movwf	15	;volatile
+   290  0044  30B0               	movlw	176
+   291  0045  008E               	movwf	14	;volatile
+   292  0046                     l637:
+   293                           
+   294                           ;main.c: 35:     TMR1CS = 0;
+   295  0046  1090               	bcf	16,1	;volatile
+   296  0047                     l639:
+   297                           
+   298                           ;main.c: 37:     T1CKPS0 = 0;
+   299  0047  1210               	bcf	16,4	;volatile
+   300  0048                     l641:
+   301                           
+   302                           ;main.c: 38:     T1CKPS1 = 0;
+   303  0048  1290               	bcf	16,5	;volatile
+   304  0049                     l643:
+   305                           
+   306                           ;main.c: 40:     TMR1ON = 1;
+   307  0049  1410               	bsf	16,0	;volatile
+   308  004A                     l29:	
+   309                           ;main.c: 42:     while(1)
    310                           
-   311                           	psect	text1
-   312  0014                     __ptext1:	
-   313 ;; *************** function _ISR *****************
-   314 ;; Defined at:
-   315 ;;		line 46 in file "main.c"
-   316 ;; Parameters:    Size  Location     Type
-   317 ;;		None
-   318 ;; Auto vars:     Size  Location     Type
-   319 ;;		None
-   320 ;; Return value:  Size  Location     Type
-   321 ;;                  1    wreg      void 
-   322 ;; Registers used:
-   323 ;;		wreg, status,2, status,0
-   324 ;; Tracked objects:
-   325 ;;		On entry : 0/0
-   326 ;;		On exit  : 0/0
-   327 ;;		Unchanged: 0/0
-   328 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-   329 ;;      Params:         0       0       0       0       0
-   330 ;;      Locals:         0       0       0       0       0
-   331 ;;      Temps:          3       0       0       0       0
-   332 ;;      Totals:         3       0       0       0       0
-   333 ;;Total ram usage:        3 bytes
-   334 ;; Hardware stack levels used: 1
-   335 ;; This function calls:
-   336 ;;		Nothing
-   337 ;; This function is called by:
-   338 ;;		Interrupt level 1
-   339 ;; This function uses a non-reentrant model
-   340 ;;
-   341                           
-   342  0014                     _ISR:	
-   343                           ;psect for function _ISR
-   344                           
-   345  0014                     i1l643:
-   346                           
-   347                           ;main.c: 48:     if(TMR1IF)
-   348  0014  1283               	bcf	3,5	;RP0=0, select bank0
-   349  0015  1303               	bcf	3,6	;RP1=0, select bank0
-   350  0016  1C0C               	btfss	12,0	;volatile
-   351  0017  2819               	goto	u1_21
-   352  0018  281A               	goto	u1_20
-   353  0019                     u1_21:
-   354  0019  2828               	goto	i1l39
-   355  001A                     u1_20:
-   356  001A                     i1l645:
-   357                           
-   358                           ;main.c: 49:     {;main.c: 50:         count++;
-   359  001A  3001               	movlw	1
-   360  001B  00F0               	movwf	??_ISR
-   361  001C  0870               	movf	??_ISR,w
-   362  001D  07F3               	addwf	_count,f
-   363                           
-   364                           ;main.c: 51:         if (count == 15)
-   365  001E  300F               	movlw	15
-   366  001F  0673               	xorwf	_count,w
-   367  0020  1D03               	btfss	3,2
-   368  0021  2823               	goto	u2_21
-   369  0022  2824               	goto	u2_20
-   370  0023                     u2_21:
-   371  0023  2827               	goto	i1l651
-   372  0024                     u2_20:
-   373  0024                     i1l647:
-   374                           
-   375                           ;main.c: 52:         {;main.c: 53:             RB0 = ~RB0;
-   376  0024  3001               	movlw	1
-   377  0025  0686               	xorwf	6,f
-   378  0026                     i1l649:
-   379                           
-   380                           ;main.c: 54:             count = 0;
-   381  0026  01F3               	clrf	_count
-   382  0027                     i1l651:
-   383                           
-   384                           ;main.c: 56:         TMR1IF = 0;
-   385  0027  100C               	bcf	12,0	;volatile
-   386  0028                     i1l39:
-   387  0028  0872               	movf	??_ISR+2,w
-   388  0029  008A               	movwf	10
-   389  002A  0E71               	swapf	??_ISR+1,w
-   390  002B  0083               	movwf	3
-   391  002C  0EFE               	swapf	btemp,f
-   392  002D  0E7E               	swapf	btemp,w
-   393  002E  0009               	retfie
-   394  002F                     __end_of_ISR:
-   395  007E                     btemp	set	126	;btemp
-   396  007E                     wtemp0	set	126
+   311  004A                     l30:	
+   312                           ;main.c: 43:     {;main.c: 44:     }
+   313                           
+   314  004A  284A               	goto	l29
+   315  004B  120A  118A  280C   	ljmp	start
+   316  004E                     __end_of_main:
+   317                           
+   318                           	psect	text1
+   319  0014                     __ptext1:	
+   320 ;; *************** function _ISR *****************
+   321 ;; Defined at:
+   322 ;;		line 48 in file "main.c"
+   323 ;; Parameters:    Size  Location     Type
+   324 ;;		None
+   325 ;; Auto vars:     Size  Location     Type
+   326 ;;		None
+   327 ;; Return value:  Size  Location     Type
+   328 ;;                  1    wreg      void 
+   329 ;; Registers used:
+   330 ;;		wreg, status,2, status,0
+   331 ;; Tracked objects:
+   332 ;;		On entry : 0/0
+   333 ;;		On exit  : 0/0
+   334 ;;		Unchanged: 0/0
+   335 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   336 ;;      Params:         0       0       0       0       0
+   337 ;;      Locals:         0       0       0       0       0
+   338 ;;      Temps:          3       0       0       0       0
+   339 ;;      Totals:         3       0       0       0       0
+   340 ;;Total ram usage:        3 bytes
+   341 ;; Hardware stack levels used: 1
+   342 ;; This function calls:
+   343 ;;		Nothing
+   344 ;; This function is called by:
+   345 ;;		Interrupt level 1
+   346 ;; This function uses a non-reentrant model
+   347 ;;
+   348                           
+   349  0014                     _ISR:	
+   350                           ;psect for function _ISR
+   351                           
+   352  0014                     i1l645:
+   353                           
+   354                           ;main.c: 50:     if(TMR1IF)
+   355  0014  1283               	bcf	3,5	;RP0=0, select bank0
+   356  0015  1303               	bcf	3,6	;RP1=0, select bank0
+   357  0016  1C0C               	btfss	12,0	;volatile
+   358  0017  2819               	goto	u1_21
+   359  0018  281A               	goto	u1_20
+   360  0019                     u1_21:
+   361  0019  282C               	goto	i1l39
+   362  001A                     u1_20:
+   363  001A                     i1l647:
+   364                           
+   365                           ;main.c: 51:     {;main.c: 52:         TMR1 = 15536;
+   366  001A  303C               	movlw	60
+   367  001B  008F               	movwf	15	;volatile
+   368  001C  30B0               	movlw	176
+   369  001D  008E               	movwf	14	;volatile
+   370  001E                     i1l649:
+   371                           
+   372                           ;main.c: 53:         count++;
+   373  001E  3001               	movlw	1
+   374  001F  00F0               	movwf	??_ISR
+   375  0020  0870               	movf	??_ISR,w
+   376  0021  07F3               	addwf	_count,f
+   377                           
+   378                           ;main.c: 54:         if (count == 20)
+   379  0022  3014               	movlw	20
+   380  0023  0673               	xorwf	_count,w
+   381  0024  1D03               	btfss	3,2
+   382  0025  2827               	goto	u2_21
+   383  0026  2828               	goto	u2_20
+   384  0027                     u2_21:
+   385  0027  282B               	goto	i1l655
+   386  0028                     u2_20:
+   387  0028                     i1l651:
+   388                           
+   389                           ;main.c: 55:         {;main.c: 56:             RB0 = ~RB0;
+   390  0028  3001               	movlw	1
+   391  0029  0686               	xorwf	6,f
+   392  002A                     i1l653:
+   393                           
+   394                           ;main.c: 57:             count = 0;
+   395  002A  01F3               	clrf	_count
+   396  002B                     i1l655:
    397                           
-   398                           	psect	intentry
-   399  0004                     __pintentry:	
-   400                           ;incstack = 0
-   401                           ; Regs used in _ISR: [wreg+status,2+status,0]
-   402                           
-   403  0004                     interrupt_function:
-   404  007E                     saved_w	set	btemp
-   405  0004  00FE               	movwf	btemp
-   406  0005  0E03               	swapf	3,w
-   407  0006  00F1               	movwf	??_ISR+1
-   408  0007  080A               	movf	10,w
-   409  0008  00F2               	movwf	??_ISR+2
-   410  0009  120A  118A  2814   	ljmp	_ISR
+   398                           ;main.c: 59:         TMR1IF = 0;
+   399  002B  100C               	bcf	12,0	;volatile
+   400  002C                     i1l39:
+   401  002C  0872               	movf	??_ISR+2,w
+   402  002D  008A               	movwf	10
+   403  002E  0E71               	swapf	??_ISR+1,w
+   404  002F  0083               	movwf	3
+   405  0030  0EFE               	swapf	btemp,f
+   406  0031  0E7E               	swapf	btemp,w
+   407  0032  0009               	retfie
+   408  0033                     __end_of_ISR:
+   409  007E                     btemp	set	126	;btemp
+   410  007E                     wtemp0	set	126
    411                           
-   412                           	psect	idloc
-   413                           
-   414                           ;Config register IDLOC0 @ 0x2000
-   415                           ;	unspecified, using default values
-   416  2000                     	org	8192
-   417  2000  3FFF               	dw	16383
-   418                           
-   419                           ;Config register IDLOC1 @ 0x2001
-   420                           ;	unspecified, using default values
-   421  2001                     	org	8193
-   422  2001  3FFF               	dw	16383
-   423                           
-   424                           ;Config register IDLOC2 @ 0x2002
-   425                           ;	unspecified, using default values
-   426  2002                     	org	8194
-   427  2002  3FFF               	dw	16383
-   428                           
-   429                           ;Config register IDLOC3 @ 0x2003
-   430                           ;	unspecified, using default values
-   431  2003                     	org	8195
-   432  2003  3FFF               	dw	16383
-   433                           
-   434                           	psect	config
-   435                           
-   436                           ;Config register CONFIG @ 0x2007
-   437                           ;	Oscillator Selection bits
-   438                           ;	FOSC = XT, XT oscillator
-   439                           ;	Watchdog Timer Enable bit
-   440                           ;	WDTE = OFF, WDT disabled
-   441                           ;	Power-up Timer Enable bit
-   442                           ;	PWRTE = ON, PWRT enabled
-   443                           ;	Brown-out Reset Enable bit
-   444                           ;	BOREN = ON, BOR enabled
-   445                           ;	Low-Voltage (Single-Supply) In-Circuit Serial Programming Enable bit
-   446                           ;	LVP = OFF, RB3 is digital I/O, HV on MCLR must be used for programming
-   447                           ;	Data EEPROM Memory Code Protection bit
-   448                           ;	CPD = OFF, Data EEPROM code protection off
-   449                           ;	Flash Program Memory Write Enable bits
-   450                           ;	WRT = OFF, Write protection off; all program memory may be written to by EECON control
-   451                           ;	In-Circuit Debugger Mode bit
-   452                           ;	DEBUG = 0x1, unprogrammed default
-   453                           ;	Flash Program Memory Code Protection bit
-   454                           ;	CP = OFF, Code protection off
-   455  2007                     	org	8199
-   456  2007  3F71               	dw	16241
+   412                           	psect	intentry
+   413  0004                     __pintentry:	
+   414                           ;incstack = 0
+   415                           ; Regs used in _ISR: [wreg+status,2+status,0]
+   416                           
+   417  0004                     interrupt_function:
+   418  007E                     saved_w	set	btemp
+   419  0004  00FE               	movwf	btemp
+   420  0005  0E03               	swapf	3,w
+   421  0006  00F1               	movwf	??_ISR+1
+   422  0007  080A               	movf	10,w
+   423  0008  00F2               	movwf	??_ISR+2
+   424  0009  120A  118A  2814   	ljmp	_ISR
+   425                           
+   426                           	psect	idloc
+   427                           
+   428                           ;Config register IDLOC0 @ 0x2000
+   429                           ;	unspecified, using default values
+   430  2000                     	org	8192
+   431  2000  3FFF               	dw	16383
+   432                           
+   433                           ;Config register IDLOC1 @ 0x2001
+   434                           ;	unspecified, using default values
+   435  2001                     	org	8193
+   436  2001  3FFF               	dw	16383
+   437                           
+   438                           ;Config register IDLOC2 @ 0x2002
+   439                           ;	unspecified, using default values
+   440  2002                     	org	8194
+   441  2002  3FFF               	dw	16383
+   442                           
+   443                           ;Config register IDLOC3 @ 0x2003
+   444                           ;	unspecified, using default values
+   445  2003                     	org	8195
+   446  2003  3FFF               	dw	16383
+   447                           
+   448                           	psect	config
+   449                           
+   450                           ;Config register CONFIG @ 0x2007
+   451                           ;	Oscillator Selection bits
+   452                           ;	FOSC = XT, XT oscillator
+   453                           ;	Watchdog Timer Enable bit
+   454                           ;	WDTE = OFF, WDT disabled
+   455                           ;	Power-up Timer Enable bit
+   456                           ;	PWRTE = ON, PWRT enabled
+   457                           ;	Brown-out Reset Enable bit
+   458                           ;	BOREN = ON, BOR enabled
+   459                           ;	Low-Voltage (Single-Supply) In-Circuit Serial Programming Enable bit
+   460                           ;	LVP = OFF, RB3 is digital I/O, HV on MCLR must be used for programming
+   461                           ;	Data EEPROM Memory Code Protection bit
+   462                           ;	CPD = OFF, Data EEPROM code protection off
+   463                           ;	Flash Program Memory Write Enable bits
+   464                           ;	WRT = OFF, Write protection off; all program memory may be written to by EECON control
+   465                           ;	In-Circuit Debugger Mode bit
+   466                           ;	DEBUG = 0x1, unprogrammed default
+   467                           ;	Flash Program Memory Code Protection bit
+   468                           ;	CP = OFF, Code protection off
+   469  2007                     	org	8199
+   470  2007  3F71               	dw	16241
 
 Data Sizes:
     Strings     0
@@ -581,24 +595,25 @@ DATA                 0      0       4      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.36 build 20220127204148 
-Symbol Table                                                                                   Mon Aug 01 02:22:55 2022
+Symbol Table                                                                                   Mon Aug 01 02:51:46 2022
 
-                     l30 0042                       l29 0042                      l631 002F  
-                    l641 0041                      l633 003A                      l635 003E  
-                    l637 003F                      l639 0040                      _GIE 005F  
-                    _RB0 0030                      _ISR 0014                     ?_ISR 0070  
-                   _PEIE 005E                     i1l39 0028                     _TMR1 000E  
-                   u1_20 001A                     u1_21 0019                     u2_20 0024  
-                   u2_21 0023                     _main 002F                     btemp 007E  
-                   start 000C                    ??_ISR 0070                    ?_main 0070  
-                  i1l651 0027                    i1l643 0014                    i1l645 001A  
-                  i1l647 0024                    i1l649 0026                    _count 0073  
-                  pclath 000A                    status 0003                    wtemp0 007E  
-        __initialization 000F             __end_of_main 0046                   ??_main 0073  
-                 _TMR1IE 0460                   _TMR1IF 0060                   _TMR1CS 0081  
-                 _TMR1ON 0080                   _TRISB0 0430                   saved_w 007E  
-__end_of__initialization 0010           __pcstackCOMMON 0070               __pmaintext 002F  
-             __pintentry 0004                  _T1CKPS0 0084                  _T1CKPS1 0085  
-                __ptext1 0014     end_of_initialization 0010      start_initialization 000F  
-            __end_of_ISR 002F              __pbssCOMMON 0073                ___latbits 0002  
-      interrupt_function 0004                 intlevel1 0000  
+                     l30 004A                       l29 004A                      l631 0033  
+                    l641 0048                      l633 003E                      l643 0049  
+                    l635 0042                      l637 0046                      l639 0047  
+                    _GIE 005F                      _RB0 0030                      _ISR 0014  
+                   ?_ISR 0070                     _PEIE 005E                     i1l39 002C  
+                   _TMR1 000E                     u1_20 001A                     u1_21 0019  
+                   u2_20 0028                     u2_21 0027                     _main 0033  
+                   btemp 007E                     start 000C                    ??_ISR 0070  
+                  ?_main 0070                    i1l651 0028                    i1l653 002A  
+                  i1l645 0014                    i1l655 002B                    i1l647 001A  
+                  i1l649 001E                    _count 0073                    pclath 000A  
+                  status 0003                    wtemp0 007E          __initialization 000F  
+           __end_of_main 004E                   ??_main 0073                   _TMR1IE 0460  
+                 _TMR1IF 0060                   _TMR1CS 0081                   _TMR1ON 0080  
+                 _TRISB0 0430                   saved_w 007E  __end_of__initialization 0010  
+         __pcstackCOMMON 0070               __pmaintext 0033               __pintentry 0004  
+                _T1CKPS0 0084                  _T1CKPS1 0085                  __ptext1 0014  
+   end_of_initialization 0010      start_initialization 000F              __end_of_ISR 0033  
+            __pbssCOMMON 0073                ___latbits 0002        interrupt_function 0004  
+               intlevel1 0000  
