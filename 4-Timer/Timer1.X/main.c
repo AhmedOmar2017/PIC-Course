@@ -9,7 +9,7 @@
 #include <xc.h>
 #include <stdint.h>
 #include "config.h"
-
+#define _XTAL_FREQ 4000000
 
 
 //create a global variable 
@@ -49,6 +49,7 @@ void __interrupt() ISR (void)
 {
     if(TMR1IF)
     {
+        // pre-load timer to accurate the value second  
         TMR1 = 15536;
         count++; 
         if (count == 20)
