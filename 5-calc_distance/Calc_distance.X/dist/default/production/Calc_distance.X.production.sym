@@ -7,7 +7,7 @@ __S3 0 0 ABS 0
 __Hintentry 0 0 CODE 0
 __Lintentry 0 0 CODE 0
 _TMR1 E 0 ABS 0
-_main 451 0 CODE 0
+_main 496 0 CODE 0
 ___sp 0 0 STACK 2
 btemp 7E 0 ABS 0
 start 0 0 CODE 0
@@ -35,7 +35,7 @@ ___int_sp 0 0 STACK 2
 _TMR1CS 81 0 ABS 0
 _TMR1ON 80 0 ABS 0
 __Habs1 0 0 ABS 0
-_clc_dist 49A 0 CODE 0
+_clc_dist 447 0 CODE 0
 __Labs1 0 0 ABS 0
 __Hsfr0 0 0 ABS 0
 __Lsfr0 0 0 ABS 0
@@ -55,12 +55,12 @@ __LcstackBANK0 0 0 ABS 0
 __pcstackBANK0 20 0 BANK0 1
 __Hinit 0 0 CODE 0
 __Linit 0 0 CODE 0
-__end_of_main 49A 0 CODE 0
+__end_of_main 4E9 0 CODE 0
 __Htext 0 0 ABS 0
 __Ltext 0 0 ABS 0
 __end_of___fldiv 7FC 0 CODE 0
 ?___xxtofl 70 0 COMMON 1
-__end_of_clc_dist 4E9 0 CODE 0
+__end_of_clc_dist 496 0 CODE 0
 end_of_initialization 7FC 0 CODE 0
 ___fldiv@sign 31 0 BANK0 1
 ___stacklo 0 0 ABS 0
@@ -80,7 +80,7 @@ __Lbank3 0 0 ABS 0
 ___latbits 2 0 ABS 0
 __Hpowerup 0 0 CODE 0
 __Lpowerup 0 0 CODE 0
-__ptext1 49A 0 CODE 0
+__ptext1 447 0 CODE 0
 __ptext2 565 0 CODE 0
 ___fldiv@grs 34 0 BANK0 1
 __ptext3 61F 0 CODE 0
@@ -94,7 +94,7 @@ __Hstack 0 0 STACK 2
 __Lstack 0 0 STACK 2
 __Hspace_0 800 0 ABS 0
 __Lspace_0 0 0 ABS 0
-_main$651 4E 0 BANK0 1
+_main$651 50 0 BANK0 1
 __Hspace_1 7E 0 ABS 0
 __Lspace_1 0 0 ABS 0
 ___fltol 4E9 0 CODE 0
@@ -131,7 +131,7 @@ start_initialization 7FC 0 CODE 0
 __end_of___xxtofl 61F 0 CODE 0
 __Hmaintext 0 0 ABS 0
 __Lmaintext 0 0 ABS 0
-__pmaintext 451 0 CODE 0
+__pmaintext 496 0 CODE 0
 ___fldiv@aexp 39 0 BANK0 1
 __initialization 7FC 0 CODE 0
 ___fldiv@bexp 38 0 BANK0 1
@@ -141,46 +141,47 @@ ___fldiv@b 24 0 BANK0 1
 reset_vec 0 5 CODE 0 0
 cinit FF8 FFF CODE FF8 0
 cstackCOMMON 70 7D COMMON 70 1
-cstackBANK0 20 51 BANK0 20 1
+cstackBANK0 20 53 BANK0 20 1
 text3 C3E FF7 CODE C3E 0
 text2 ACA C3D CODE ACA 0
 text4 9D2 AC9 CODE 9D2 0
-text1 934 9D1 CODE 934 0
-maintext 8A2 933 CODE 8A2 0
+maintext 92C 9D1 CODE 92C 0
+text1 88E 92B CODE 88E 0
 %locals
 dist/default/production\Calc_distance.X.production.o
-C:\Users\INGENI~1\AppData\Local\Temp\xcAs73c.s
+C:\Users\INGENI~1\AppData\Local\Temp\xcAs20c.s
 375 7FC 0 CODE 0
 378 7FC 0 CODE 0
 384 7FC 0 CODE 0
 386 7FC 0 CODE 0
 387 7FD 0 CODE 0
 main.c
-16 451 0 CODE 0
-18 451 0 CODE 0
-21 451 0 CODE 0
-24 454 0 CODE 0
-27 457 0 CODE 0
-30 45A 0 CODE 0
-32 45B 0 CODE 0
-33 45E 0 CODE 0
-36 45F 0 CODE 0
-40 460 0 CODE 0
-48 493 0 CODE 0
-49 496 0 CODE 0
-56 49A 0 CODE 0
-58 49A 0 CODE 0
-59 49A 0 CODE 0
-62 49E 0 CODE 0
-63 49F 0 CODE 0
-64 4A6 0 CODE 0
-66 4A9 0 CODE 0
-69 4AD 0 CODE 0
-72 4AE 0 CODE 0
-75 4B2 0 CODE 0
-78 4B3 0 CODE 0
-79 4E0 0 CODE 0
-81 4E8 0 CODE 0
+16 496 0 CODE 0
+18 496 0 CODE 0
+21 496 0 CODE 0
+24 499 0 CODE 0
+27 49C 0 CODE 0
+30 49F 0 CODE 0
+32 4A0 0 CODE 0
+33 4A3 0 CODE 0
+36 4A4 0 CODE 0
+40 4A5 0 CODE 0
+48 4D8 0 CODE 0
+49 4DB 0 CODE 0
+50 4E5 0 CODE 0
+57 447 0 CODE 0
+59 447 0 CODE 0
+60 447 0 CODE 0
+63 44B 0 CODE 0
+64 44C 0 CODE 0
+65 453 0 CODE 0
+67 456 0 CODE 0
+70 45A 0 CODE 0
+73 45B 0 CODE 0
+76 45F 0 CODE 0
+79 460 0 CODE 0
+80 48D 0 CODE 0
+82 495 0 CODE 0
 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\xxtofl.c
 10 565 0 CODE 0
 15 566 0 CODE 0

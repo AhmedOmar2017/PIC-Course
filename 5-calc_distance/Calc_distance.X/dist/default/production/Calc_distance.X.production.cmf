@@ -14,15 +14,15 @@
 $dist/default/production\Calc_distance.X.production.o
 cinit CODE 0 7FC 7FC 4 2 1
 idloc IDLOC 5 2000 2000 4 2 1
-text1 CODE 0 49A 49A 4F 2 1
+text1 CODE 0 447 447 4F 2 1
 text2 CODE 0 565 565 BA 2 1
 text3 CODE 0 61F 61F 1DD 2 1
 text4 CODE 0 4E9 4E9 7C 2 1
-maintext CODE 0 451 451 49 2 1
+maintext CODE 0 496 496 53 2 1
 cstackCOMMON COMMON 1 70 70 E 1 1
-cstackBANK0 BANK0 1 20 20 32 1 1
+cstackBANK0 BANK0 1 20 20 34 1 1
 config CONFIG 4 2007 2007 1 2 1
-$C:\Users\INGENI~1\AppData\Local\Temp\xcAs73c.o
+$C:\Users\INGENI~1\AppData\Local\Temp\xcAs20c.o
 idloc IDLOC 5 2000 2000 4 2 1
 end_init CODE 0 0 0 3 2 1
 config CONFIG 4 2007 2007 1 2 1
@@ -32,28 +32,28 @@ config CONFIG 4 2007 2007 1 2 1
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 52-6F 1
+RAM 54-6F 1
 RAM A0-EF 1
 RAM 110-16F 1
 RAM 190-1EF 1
-BANK0 52-6F 1
+BANK0 54-6F 1
 BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
-CONST 3-450 2
+CONST 3-446 2
 CONST 800-1FFF 2
-ENTRY 3-450 2
+ENTRY 3-446 2
 ENTRY 800-1FFF 2
-CODE 3-450 2
+CODE 3-446 2
 CODE 800-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
 SFR3 180-18F 1
 EEDATA 2100-21FF 2
-STRCODE 3-450 2
+STRCODE 3-446 2
 STRCODE 800-1FFF 2
-STRING 3-450 2
+STRING 3-446 2
 STRING 800-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -69,11 +69,11 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Calc_distance.X.production.o
-7FC cinit CODE >375:C:\Users\INGENI~1\AppData\Local\Temp\xcAs73c.s
-7FC cinit CODE >378:C:\Users\INGENI~1\AppData\Local\Temp\xcAs73c.s
-7FC cinit CODE >384:C:\Users\INGENI~1\AppData\Local\Temp\xcAs73c.s
-7FC cinit CODE >386:C:\Users\INGENI~1\AppData\Local\Temp\xcAs73c.s
-7FD cinit CODE >387:C:\Users\INGENI~1\AppData\Local\Temp\xcAs73c.s
+7FC cinit CODE >375:C:\Users\INGENI~1\AppData\Local\Temp\xcAs20c.s
+7FC cinit CODE >378:C:\Users\INGENI~1\AppData\Local\Temp\xcAs20c.s
+7FC cinit CODE >384:C:\Users\INGENI~1\AppData\Local\Temp\xcAs20c.s
+7FC cinit CODE >386:C:\Users\INGENI~1\AppData\Local\Temp\xcAs20c.s
+7FD cinit CODE >387:C:\Users\INGENI~1\AppData\Local\Temp\xcAs20c.s
 4E9 text4 CODE >43:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\fltol.c
 4E9 text4 CODE >47:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\fltol.c
 4F6 text4 CODE >48:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\fltol.c
@@ -261,31 +261,32 @@ $dist/default/production\Calc_distance.X.production.o
 615 text2 CODE >42:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\xxtofl.c
 616 text2 CODE >43:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\xxtofl.c
 61E text2 CODE >44:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\xxtofl.c
-49A text1 CODE >56:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
-49A text1 CODE >58:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
-49A text1 CODE >59:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
-49E text1 CODE >62:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
-49F text1 CODE >63:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
-4A6 text1 CODE >64:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
-4A9 text1 CODE >66:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
-4AD text1 CODE >69:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
-4AE text1 CODE >72:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
-4B2 text1 CODE >75:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
-4B3 text1 CODE >78:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
-4E0 text1 CODE >79:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
-4E8 text1 CODE >81:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
-451 maintext CODE >16:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
-451 maintext CODE >18:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
-451 maintext CODE >21:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
-454 maintext CODE >24:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
-457 maintext CODE >27:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
-45A maintext CODE >30:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
-45B maintext CODE >32:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
-45E maintext CODE >33:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
-45F maintext CODE >36:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
-460 maintext CODE >40:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
-493 maintext CODE >48:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
-496 maintext CODE >49:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
+447 text1 CODE >57:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
+447 text1 CODE >59:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
+447 text1 CODE >60:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
+44B text1 CODE >63:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
+44C text1 CODE >64:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
+453 text1 CODE >65:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
+456 text1 CODE >67:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
+45A text1 CODE >70:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
+45B text1 CODE >73:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
+45F text1 CODE >76:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
+460 text1 CODE >79:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
+48D text1 CODE >80:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
+495 text1 CODE >82:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
+496 maintext CODE >16:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
+496 maintext CODE >18:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
+496 maintext CODE >21:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
+499 maintext CODE >24:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
+49C maintext CODE >27:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
+49F maintext CODE >30:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
+4A0 maintext CODE >32:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
+4A3 maintext CODE >33:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
+4A4 maintext CODE >36:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
+4A5 maintext CODE >40:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
+4D8 maintext CODE >48:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
+4DB maintext CODE >49:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
+4E5 maintext CODE >50:D:\courses\PIC\5-calc_distance\Calc_distance.X\main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -307,17 +308,17 @@ __Hspace_4 400F 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
 _TMR1 E 0 ABS 0 - dist/default/production\Calc_distance.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\INGENI~1\AppData\Local\Temp\xcAs73c.o
-_main 8A2 0 CODE 0 maintext dist/default/production\Calc_distance.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\INGENI~1\AppData\Local\Temp\xcAs20c.o
+_main 92C 0 CODE 0 maintext dist/default/production\Calc_distance.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Calc_distance.X.production.o
-start 0 0 CODE 0 init C:\Users\INGENI~1\AppData\Local\Temp\xcAs73c.o
+start 0 0 CODE 0 init C:\Users\INGENI~1\AppData\Local\Temp\xcAs20c.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\INGENI~1\AppData\Local\Temp\xcAs73c.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\INGENI~1\AppData\Local\Temp\xcAs73c.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\INGENI~1\AppData\Local\Temp\xcAs73c.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\INGENI~1\AppData\Local\Temp\xcAs73c.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\INGENI~1\AppData\Local\Temp\xcAs73c.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\INGENI~1\AppData\Local\Temp\xcAs73c.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\INGENI~1\AppData\Local\Temp\xcAs20c.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\INGENI~1\AppData\Local\Temp\xcAs20c.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\INGENI~1\AppData\Local\Temp\xcAs20c.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\INGENI~1\AppData\Local\Temp\xcAs20c.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\INGENI~1\AppData\Local\Temp\xcAs20c.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\INGENI~1\AppData\Local\Temp\xcAs20c.o
 wtemp0 7E 0 ABS 0 - dist/default/production\Calc_distance.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
@@ -328,8 +329,8 @@ ___fldiv@bexp 38 0 BANK0 1 cstackBANK0 dist/default/production\Calc_distance.X.p
 ___fldiv@sign 31 0 BANK0 1 cstackBANK0 dist/default/production\Calc_distance.X.production.o
 __end_of___fldiv FF8 0 CODE 0 text3 dist/default/production\Calc_distance.X.production.o
 __end_of___fltol ACA 0 CODE 0 text4 dist/default/production\Calc_distance.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\INGENI~1\AppData\Local\Temp\xcAs73c.o
-___stacklo 0 0 ABS 0 - C:\Users\INGENI~1\AppData\Local\Temp\xcAs73c.o
+___stackhi 0 0 ABS 0 - C:\Users\INGENI~1\AppData\Local\Temp\xcAs20c.o
+___stacklo 0 0 ABS 0 - C:\Users\INGENI~1\AppData\Local\Temp\xcAs20c.o
 ___fldiv@a 20 0 BANK0 1 cstackBANK0 dist/default/production\Calc_distance.X.production.o
 ___fldiv@b 24 0 BANK0 1 cstackBANK0 dist/default/production\Calc_distance.X.production.o
 start_initialization FF8 0 CODE 0 cinit dist/default/production\Calc_distance.X.production.o
@@ -338,7 +339,7 @@ _TMR1CS 81 0 ABS 0 - dist/default/production\Calc_distance.X.production.o
 _TMR1ON 80 0 ABS 0 - dist/default/production\Calc_distance.X.production.o
 _TRISC2 43A 0 ABS 0 - dist/default/production\Calc_distance.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\Calc_distance.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\INGENI~1\AppData\Local\Temp\xcAs73c.o
+___int_sp 0 0 STACK 2 stack C:\Users\INGENI~1\AppData\Local\Temp\xcAs20c.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -385,11 +386,11 @@ __S1 7E 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 ___xxtofl ACA 0 CODE 0 text2 dist/default/production\Calc_distance.X.production.o
 __Lintentry 0 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\INGENI~1\AppData\Local\Temp\xcAs73c.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\INGENI~1\AppData\Local\Temp\xcAs20c.o
 __end_of___xxtofl C3E 0 CODE 0 text2 dist/default/production\Calc_distance.X.production.o
 ___fldiv C3E 0 CODE 0 text3 dist/default/production\Calc_distance.X.production.o
 ___fltol 9D2 0 CODE 0 text4 dist/default/production\Calc_distance.X.production.o
-__pmaintext 8A2 0 CODE 0 maintext dist/default/production\Calc_distance.X.production.o
+__pmaintext 92C 0 CODE 0 maintext dist/default/production\Calc_distance.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
 ___fldiv@grs 34 0 BANK0 1 cstackBANK0 dist/default/production\Calc_distance.X.production.o
@@ -410,7 +411,7 @@ __Lstrings 0 0 ABS 0 strings -
 ?___fldiv 20 0 BANK0 1 cstackBANK0 dist/default/production\Calc_distance.X.production.o
 ?___fltol 43 0 BANK0 1 cstackBANK0 dist/default/production\Calc_distance.X.production.o
 __Hreset_vec 0 0 CODE 0 reset_vec -
-__ptext1 934 0 CODE 0 text1 dist/default/production\Calc_distance.X.production.o
+__ptext1 88E 0 CODE 0 text1 dist/default/production\Calc_distance.X.production.o
 __ptext2 ACA 0 CODE 0 text2 dist/default/production\Calc_distance.X.production.o
 __ptext3 C3E 0 CODE 0 text3 dist/default/production\Calc_distance.X.production.o
 __ptext4 9D2 0 CODE 0 text4 dist/default/production\Calc_distance.X.production.o
@@ -427,16 +428,16 @@ _T1CKPS0 84 0 ABS 0 - dist/default/production\Calc_distance.X.production.o
 _T1CKPS1 85 0 ABS 0 - dist/default/production\Calc_distance.X.production.o
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\Calc_distance.X.production.o
 __Hend_init 6 0 CODE 0 end_init -
-__end_of_main 934 0 CODE 0 maintext dist/default/production\Calc_distance.X.production.o
+__end_of_main 9D2 0 CODE 0 maintext dist/default/production\Calc_distance.X.production.o
 _PORTB 6 0 ABS 0 - dist/default/production\Calc_distance.X.production.o
 _TRISB 86 0 ABS 0 - dist/default/production\Calc_distance.X.production.o
-_main$651 4E 0 BANK0 1 cstackBANK0 dist/default/production\Calc_distance.X.production.o
+_main$651 50 0 BANK0 1 cstackBANK0 dist/default/production\Calc_distance.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-_clc_dist 934 0 CODE 0 text1 dist/default/production\Calc_distance.X.production.o
+_clc_dist 88E 0 CODE 0 text1 dist/default/production\Calc_distance.X.production.o
 __initialization FF8 0 CODE 0 cinit dist/default/production\Calc_distance.X.production.o
 ___xxtofl@sign 78 0 COMMON 1 cstackCOMMON dist/default/production\Calc_distance.X.production.o
-__end_of_clc_dist 9D2 0 CODE 0 text1 dist/default/production\Calc_distance.X.production.o
+__end_of_clc_dist 92C 0 CODE 0 text1 dist/default/production\Calc_distance.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -463,13 +464,13 @@ __end_of_clc_dist 9D2 0 CODE 0 text1 dist/default/production\Calc_distance.X.pro
 # All other numeric quantities are in decimal.
 %SEGMENTS
 cinit 0 7FC FF8 4 2
-text1 0 49A 934 4F 2
+text1 0 447 88E 4F 2
 text2 0 565 ACA BA 2
 text3 0 61F C3E 1DD 2
 text4 0 4E9 9D2 7C 2
-maintext 0 451 8A2 49 2
+maintext 0 496 92C 53 2
 cstackCOMMON 1 70 70 E 1
-cstackBANK0 1 20 20 32 1
+cstackBANK0 1 20 20 34 1
 reset_vec 0 0 0 3 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section

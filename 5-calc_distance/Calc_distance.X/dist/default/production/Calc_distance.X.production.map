@@ -5,9 +5,9 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.36\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\Calc_distance.X.production.sym \
   --cmf=dist/default/production\Calc_distance.X.production.cmf -z -Q16F877A \
-  -oC:\Users\INGENI~1\AppData\Local\Temp\xcAs73c.4 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\INGENI~1\AppData\Local\Temp\xcAs20c.4 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/Calc_distance.X.production.map \
-  --md=C:\Users\INGENI~1\AppData\Local\Temp\xcAs73c.dat -E1 \
+  --md=C:\Users\INGENI~1\AppData\Local\Temp\xcAs20c.dat -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh \
   -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 -AENTRY=00h-0FFhx32 \
   -ACOMMON=070h-07Fh -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh \
@@ -19,7 +19,7 @@ Linker command line:
   -AEEDATA=00h-0FFh/02100h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 \
   -preset_vec=00h,intentry,init,end_init -ppowerup=CODE -pcinit=CODE \
-  -pfunctab=ENTRY -k C:\Users\INGENI~1\AppData\Local\Temp\xcAs73c.o \
+  -pfunctab=ENTRY -k C:\Users\INGENI~1\AppData\Local\Temp\xcAs20c.o \
   dist/default/production\Calc_distance.X.production.o 
 
 Object code version is 3.11
@@ -29,7 +29,7 @@ Machine type is 16F877A
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\INGENI~1\AppData\Local\Temp\xcAs73c.o
+C:\Users\INGENI~1\AppData\Local\Temp\xcAs20c.o
                 end_init                              0        0        3        0       0
                 config                             2007     2007        1        0       4
                 idloc                              2000     2000        4        0       5
@@ -40,9 +40,9 @@ dist/default/production\Calc_distance.X.production.o
                 text4                               4E9      4E9       7C      9D2       0
                 text3                               61F      61F      1DD      C3E       0
                 text2                               565      565       BA      ACA       0
-                text1                               49A      49A       4F      934       0
-                maintext                            451      451       49      8A2       0
-                cstackBANK0                          20       20       32       20       1
+                text1                               447      447       4F      88E       0
+                maintext                            496      496       53      92C       0
+                cstackBANK0                          20       20       34       20       1
                 cstackCOMMON                         70       70        E       70       1
 
 TOTAL           Name                               Link     Load   Length     Space
@@ -52,8 +52,8 @@ TOTAL           Name                               Link     Load   Length     Sp
                 text4                               4E9      4E9       7C         0
                 text3                               61F      61F      1DD         0
                 text2                               565      565       BA         0
-                text1                               49A      49A       4F         0
-                maintext                            451      451       49         0
+                text1                               447      447       4F         0
+                maintext                            496      496       53         0
 
         CLASS   STRCODE        
 
@@ -67,7 +67,7 @@ TOTAL           Name                               Link     Load   Length     Sp
                 cstackCOMMON                         70       70        E         1
 
         CLASS   BANK0          
-                cstackBANK0                          20       20       32         1
+                cstackBANK0                          20       20       34         1
 
         CLASS   BANK1          
 
@@ -103,10 +103,10 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000003  000003         0       0  CODE        2
-                cstackBANK0                    000020  000032  000052        20       1  BANK0       1
+                cstackBANK0                    000020  000034  000054        20       1  BANK0       1
                 cstackCOMMON                   000070  00000E  00007E        70       1  COMMON      1
-                maintext                       000451  000049  00049A       8A2       0  CODE        2
-                text1                          00049A  00004F  0004E9       934       0  CODE        2
+                text1                          000447  00004F  000496       88E       0  CODE        2
+                maintext                       000496  000053  0004E9       92C       0  CODE        2
                 text4                          0004E9  00007C  000565       9D2       0  CODE        2
                 text2                          000565  0000BA  00061F       ACA       0  CODE        2
                 text3                          00061F  0001DD  0007FC       C3E       0  CODE        2
@@ -116,18 +116,18 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
 UNUSED ADDRESS RANGES
 
         Name                Unused          Largest block    Delta
-        BANK0            0052-006F             1E           1
+        BANK0            0054-006F             1C           1
         BANK1            00A0-00EF             50           1
         BANK2            0110-016F             60           1
         BANK3            0190-01EF             60           1
-        CODE             0003-0450            44E           2
+        CODE             0003-0446            444           2
                          0800-1FFF            800
-        CONST            0003-0450            100           2
+        CONST            0003-0446            100           2
                          0800-1FFF            100
         EEDATA           2100-21FF            100           2
-        ENTRY            0003-0450            100           2
+        ENTRY            0003-0446            100           2
                          0800-1FFF            100
-        RAM              0052-006F             1E           1
+        RAM              0054-006F             1C           1
                          00A0-00EF             50
                          0110-016F             60
                          0190-01EF             60
@@ -135,9 +135,9 @@ UNUSED ADDRESS RANGES
         SFR1             0080-009F             20           1
         SFR2             0100-010F             10           1
         SFR3             0180-018F             10           1
-        STRCODE          0003-0450            44E           2
+        STRCODE          0003-0446            444           2
                          0800-1FFF           1800
-        STRING           0003-0450            100           2
+        STRING           0003-0446            100           2
                          0800-1FFF            100
 
                                   Symbol Table
@@ -255,19 +255,19 @@ __end_of___fldiv         text3        07FC
 __end_of___fltol         text4        0565
 __end_of___xxtofl        text2        061F
 __end_of__initialization cinit        07FC
-__end_of_clc_dist        text1        04E9
-__end_of_main            maintext     049A
+__end_of_clc_dist        text1        0496
+__end_of_main            maintext     04E9
 __initialization         cinit        07FC
 __pcstackBANK0           cstackBANK0  0020
 __pcstackCOMMON          cstackCOMMON 0070
-__pmaintext              maintext     0451
-__ptext1                 text1        049A
+__pmaintext              maintext     0496
+__ptext1                 text1        0447
 __ptext2                 text2        0565
 __ptext3                 text3        061F
 __ptext4                 text4        04E9
-_clc_dist                text1        049A
-_main                    maintext     0451
-_main$651                cstackBANK0  004E
+_clc_dist                text1        0447
+_main                    maintext     0496
+_main$651                cstackBANK0  0050
 btemp                    (abs)        007E
 clc_dist@distance        cstackBANK0  003F
 end_of_initialization    cinit        07FC
@@ -307,8 +307,8 @@ C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\xxtofl.c
 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\xxtofl.c estimated size: 186
 
 main.c
-		_main          		CODE           	0451	0000	73
-		_clc_dist      		CODE           	049A	0000	79
+		_main          		CODE           	0496	0000	83
+		_clc_dist      		CODE           	0447	0000	79
 
-main.c estimated size: 152
+main.c estimated size: 162
 

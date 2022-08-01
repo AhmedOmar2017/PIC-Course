@@ -9,11 +9,11 @@
 ### Memory Usage ###
  Intel Hex-file ranges:
   0h - 5h		(dist/default/production\Calc_distance.X.production.hex)
-  8A2h - FFFh		(dist/default/production\Calc_distance.X.production.hex)
+  88Eh - FFFh		(dist/default/production\Calc_distance.X.production.hex)
   4000h - 4007h		(dist/default/production\Calc_distance.X.production.hex)
   400Eh - 400Fh		(dist/default/production\Calc_distance.X.production.hex)
  Unused ranges:
-  6h - 8A1h
+  6h - 88Dh
   1000h - 3FFFh
   4008h - 400Dh
 
@@ -26,7 +26,9 @@
 ----------------------------------------------------------
 00000000 | H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- -- -- --
 ----------------------------------------------------------
-000008A0 | -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00000880 | -- -- -- -- -- -- -- -- -- -- -- -- -- -- H1 H1
+00000890 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000008A0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000008B0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000008C0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000008D0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1

@@ -1910,11 +1910,12 @@ void main(void) {
 
         switch (dist)
         {
-            case1: PORTB = 0x01;
-            case2: PORTB = 0x03;
-            case3: PORTB = 0x07;
-            case4: PORTB = 0x0F;
+            case1: PORTB = 0x01; break;
+            case2: PORTB = 0x03; break;
+            case3: PORTB = 0x07; break;
+            case4: PORTB = 0x0F; break;
             default: PORTB = 0x00;
+            _delay((unsigned long)((100)*(4000000/4000.0)));
         }
 
     }
