@@ -12,13 +12,15 @@
 
 
 void main(void) {
-    
+    // set the port B as output for capture operation  
     TRISB = 0x00;
-    PORTB = 0x00;
+    PORTB = 0x00;   //initial value is zero
     
+    // set the port D as output for Timer operation  
     TRISD = 0x00;
-    PORTD = 0x00;
+    PORTD = 0x00;   //initial value is zero
     
+    /* configration of timer as a counter  */
     TMR1 = 0;
     T1CKPS0 = 0;
     T1CKPS1 = 0;
@@ -27,17 +29,21 @@ void main(void) {
     T1SYNC = 0;
     TMR1ON = 1;
     
+    /* configration  ccp1 to operaten as a capture mode every rising edge */
     CCP1M0 = 1;
     CCP1M1 = 0;
     CCP1M2 = 1;
     CCP1M3 = 0;
     
+    /* enable ccp1 interrupt */
     CCP1IE = 1;
     PEIE = 1;
     GIE = 1;
     
+    
     while(1)
     {
+        // print out value of timer 1
         PORTD = TMR1;
     }
     return;
