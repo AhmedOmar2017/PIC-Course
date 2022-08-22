@@ -3,8 +3,8 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>master</name>
-            <creation-uuid>ad417860-c0c5-4a3e-b7ac-022dfa1ce115</creation-uuid>
+            <name>MASTER</name>
+            <creation-uuid>7941ee3e-03e1-4bef-8656-f3d65745c1b8</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
             <cpp-extensions/>
@@ -12,10 +12,7 @@
             <asminc-extensions/>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
-            <sourceRootList>
-                <sourceRootElem>.</sourceRootElem>
-                <sourceRootElem>../../../../../برامج/نسخ/Windows 10 X64 21H1 10in1 OEM ESD en-US JULY 2021 {Gen2}/PIC_SPI/SPI</sourceRootElem>
-            </sourceRootList>
+            <sourceRootList/>
             <confList>
                 <confElem>
                     <name>default</name>

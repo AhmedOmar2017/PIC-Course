@@ -4,9 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>UART.c</itemPath>
-      <itemPath>UART.h</itemPath>
-      <itemPath>config.h</itemPath>
+      <itemPath>CONFIG.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -23,10 +21,6 @@
     </logicalFolder>
     <itemPath>main.c</itemPath>
   </logicalFolder>
-  <sourceRootList>
-    <Elem>.</Elem>
-    <Elem>../../../../../برامج/نسخ/Windows 10 X64 21H1 10in1 OEM ESD en-US JULY 2021 {Gen2}/PIC_SPI/SPI</Elem>
-  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="default" type="2">
