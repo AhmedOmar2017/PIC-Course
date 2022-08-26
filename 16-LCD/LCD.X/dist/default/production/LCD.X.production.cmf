@@ -1,0 +1,404 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\INGENI~1\AppData\Local\Temp\xcAs7c8.o
+idloc IDLOC 5 2000 2000 4 2 1
+end_init CODE 0 0 0 3 2 1
+config CONFIG 4 2007 2007 1 2 1
+$dist/default/production\LCD.X.production.o
+cinit CODE 0 7FC 7FC 4 2 1
+idloc IDLOC 5 2000 2000 4 2 1
+text1 CODE 0 663 663 25 2 1
+text2 CODE 0 688 688 43 2 1
+text3 CODE 0 61E 61E D 2 1
+text4 CODE 0 611 611 D 2 1
+text5 CODE 0 6CB 6CB 51 2 1
+text6 CODE 0 71C 71C 62 2 1
+text7 CODE 0 604 604 D 2 1
+text8 CODE 0 62B 62B 16 2 1
+text9 CODE 0 641 641 22 2 1
+maintext CODE 0 77E 77E 7E 2 1
+cstackCOMMON COMMON 1 70 70 D 1 1
+cstackBANK0 BANK0 1 20 20 4 1 1
+strings STRING 0 3 3 1F 2 1
+config CONFIG 4 2007 2007 1 2 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 24-6F 1
+RAM A0-EF 1
+RAM 110-16F 1
+RAM 190-1EF 1
+BANK0 24-6F 1
+BANK1 A0-EF 1
+BANK2 110-16F 1
+BANK3 190-1EF 1
+CONST 22-603 2
+CONST 800-1FFF 2
+ENTRY 22-603 2
+ENTRY 800-1FFF 2
+CODE 22-603 2
+CODE 800-1FFF 2
+SFR0 0-1F 1
+SFR1 80-9F 1
+SFR2 100-10F 1
+SFR3 180-18F 1
+COMMON 7D-7D 1
+EEDATA 2100-21FF 2
+STRCODE 22-603 2
+STRCODE 800-1FFF 2
+STRING 22-603 2
+STRING 800-1FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\LCD.X.production.o
+7FC cinit CODE >551:C:\Users\INGENI~1\AppData\Local\Temp\xcAs7c8.s
+7FC cinit CODE >554:C:\Users\INGENI~1\AppData\Local\Temp\xcAs7c8.s
+7FC cinit CODE >560:C:\Users\INGENI~1\AppData\Local\Temp\xcAs7c8.s
+7FC cinit CODE >562:C:\Users\INGENI~1\AppData\Local\Temp\xcAs7c8.s
+7FD cinit CODE >563:C:\Users\INGENI~1\AppData\Local\Temp\xcAs7c8.s
+641 text9 CODE >15:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+642 text9 CODE >17:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+64A text9 CODE >18:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+64D text9 CODE >19:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+653 text9 CODE >20:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+654 text9 CODE >21:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+65A text9 CODE >22:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+65B text9 CODE >23:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+661 text9 CODE >24:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+662 text9 CODE >25:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+62B text8 CODE >30:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+62C text8 CODE >32:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+62F text8 CODE >33:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+635 text8 CODE >34:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+638 text8 CODE >35:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+63D text8 CODE >36:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+640 text8 CODE >37:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+604 text7 CODE >94:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+604 text7 CODE >96:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+60A text7 CODE >97:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+610 text7 CODE >98:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+71C text6 CODE >41:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+71C text6 CODE >43:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+71F text6 CODE >44:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+720 text6 CODE >45:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+721 text6 CODE >46:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+727 text6 CODE >47:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+72F text6 CODE >48:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+734 text6 CODE >49:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+73A text6 CODE >50:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+742 text6 CODE >51:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+748 text6 CODE >52:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+74D text6 CODE >53:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+753 text6 CODE >54:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+759 text6 CODE >55:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+75F text6 CODE >56:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+765 text6 CODE >57:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+76B text6 CODE >58:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+771 text6 CODE >59:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+777 text6 CODE >60:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+77D text6 CODE >61:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+6CB text5 CODE >102:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+6CC text5 CODE >105:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+6D1 text5 CODE >107:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+6D6 text5 CODE >108:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+6D9 text5 CODE >108:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+6DC text5 CODE >108:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+6E2 text5 CODE >109:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+6E7 text5 CODE >110:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+6ED text5 CODE >111:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+6F3 text5 CODE >114:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+6F9 text5 CODE >116:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+6FE text5 CODE >117:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+701 text5 CODE >117:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+704 text5 CODE >117:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+70A text5 CODE >118:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+70F text5 CODE >119:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+715 text5 CODE >120:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+71B text5 CODE >122:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+611 text4 CODE >126:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+611 text4 CODE >128:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+617 text4 CODE >129:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+61D text4 CODE >130:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+61E text3 CODE >133:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+61E text3 CODE >135:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+624 text3 CODE >136:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+62A text3 CODE >137:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+688 text2 CODE >64:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+689 text2 CODE >67:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+68E text2 CODE >68:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+693 text2 CODE >69:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+696 text2 CODE >70:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+699 text2 CODE >70:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+69C text2 CODE >70:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+6A4 text2 CODE >71:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+6A7 text2 CODE >72:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+6AC text2 CODE >73:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+6AF text2 CODE >74:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+6B4 text2 CODE >75:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+6BA text2 CODE >76:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+6BD text2 CODE >77:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+6C2 text2 CODE >78:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+6C5 text2 CODE >79:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+6CA text2 CODE >80:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+663 text1 CODE >83:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+664 text1 CODE >86:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+667 text1 CODE >88:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+674 text1 CODE >89:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+676 text1 CODE >89:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+683 text1 CODE >89:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+687 text1 CODE >90:D:\courses\PIC\16-LCD\LCD.X\LCD.c
+77E maintext CODE >13:D:\courses\PIC\16-LCD\LCD.X\main.c
+77E maintext CODE >14:D:\courses\PIC\16-LCD\LCD.X\main.c
+783 maintext CODE >15:D:\courses\PIC\16-LCD\LCD.X\main.c
+788 maintext CODE >16:D:\courses\PIC\16-LCD\LCD.X\main.c
+790 maintext CODE >17:D:\courses\PIC\16-LCD\LCD.X\main.c
+796 maintext CODE >18:D:\courses\PIC\16-LCD\LCD.X\main.c
+79E maintext CODE >19:D:\courses\PIC\16-LCD\LCD.X\main.c
+7A4 maintext CODE >22:D:\courses\PIC\16-LCD\LCD.X\main.c
+7A8 maintext CODE >24:D:\courses\PIC\16-LCD\LCD.X\main.c
+7B4 maintext CODE >25:D:\courses\PIC\16-LCD\LCD.X\main.c
+7B9 maintext CODE >26:D:\courses\PIC\16-LCD\LCD.X\main.c
+7BD maintext CODE >26:D:\courses\PIC\16-LCD\LCD.X\main.c
+7C6 maintext CODE >26:D:\courses\PIC\16-LCD\LCD.X\main.c
+7CA maintext CODE >26:D:\courses\PIC\16-LCD\LCD.X\main.c
+7CE maintext CODE >27:D:\courses\PIC\16-LCD\LCD.X\main.c
+7D2 maintext CODE >29:D:\courses\PIC\16-LCD\LCD.X\main.c
+7DE maintext CODE >30:D:\courses\PIC\16-LCD\LCD.X\main.c
+7E3 maintext CODE >31:D:\courses\PIC\16-LCD\LCD.X\main.c
+7E7 maintext CODE >31:D:\courses\PIC\16-LCD\LCD.X\main.c
+7F0 maintext CODE >31:D:\courses\PIC\16-LCD\LCD.X\main.c
+7F4 maintext CODE >31:D:\courses\PIC\16-LCD\LCD.X\main.c
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___latbits 2 0 ABS 0 - dist/default/production\LCD.X.production.o
+__Hspace_0 800 0 ABS 0 - -
+__Hspace_1 7D 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__Hspace_4 400F 0 ABS 0 - -
+_LCD_WRITE_CHAR D10 0 CODE 0 text2 dist/default/production\LCD.X.production.o
+LCD_SET_CORSER@c 73 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+LCD_SET_CORSER@r 76 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__end_of_LCD_SL C3C 0 CODE 0 text4 dist/default/production\LCD.X.production.o
+__end_of_LCD_SR C56 0 CODE 0 text3 dist/default/production\LCD.X.production.o
+main@i 20 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
+LCD_CMD@CMD 72 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+__Hstrings 0 0 ABS 0 strings -
+___sp 0 0 STACK 2 stack C:\Users\INGENI~1\AppData\Local\Temp\xcAs7c8.o
+_main EFC 0 CODE 0 maintext dist/default/production\LCD.X.production.o
+btemp 7E 0 ABS 0 - dist/default/production\LCD.X.production.o
+start 0 0 CODE 0 init C:\Users\INGENI~1\AppData\Local\Temp\xcAs7c8.o
+_LCD_DATA C82 0 CODE 0 text9 dist/default/production\LCD.X.production.o
+_LCD_INIT E38 0 CODE 0 text6 dist/default/production\LCD.X.production.o
+__Hpowerup 0 0 CODE 0 powerup -
+LCD_SET_CORSER@high4 78 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+__end_of_LCD_WRITE_CHAR D96 0 CODE 0 text2 dist/default/production\LCD.X.production.o
+__end_of_LCD_DATA CC6 0 CODE 0 text9 dist/default/production\LCD.X.production.o
+__end_of_LCD_INIT EFC 0 CODE 0 text6 dist/default/production\LCD.X.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\INGENI~1\AppData\Local\Temp\xcAs7c8.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\INGENI~1\AppData\Local\Temp\xcAs7c8.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\INGENI~1\AppData\Local\Temp\xcAs7c8.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\INGENI~1\AppData\Local\Temp\xcAs7c8.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\INGENI~1\AppData\Local\Temp\xcAs7c8.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\INGENI~1\AppData\Local\Temp\xcAs7c8.o
+wtemp0 7E 0 ABS 0 - dist/default/production\LCD.X.production.o
+__Hfunctab 0 0 ENTRY 0 functab -
+__Hclrtext 0 0 ABS 0 clrtext -
+__Lmaintext 0 0 ABS 0 maintext -
+LCD_WRITE_STRING@str 77 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+LCD_SET_CORSER@low4 77 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+LCD_SET_CORSER@temp 79 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+_LCD_WRITE_STRING CC6 0 CODE 0 text1 dist/default/production\LCD.X.production.o
+___stackhi 0 0 ABS 0 - C:\Users\INGENI~1\AppData\Local\Temp\xcAs7c8.o
+___stacklo 0 0 ABS 0 - C:\Users\INGENI~1\AppData\Local\Temp\xcAs7c8.o
+__end_of_LCD_CMD C82 0 CODE 0 text8 dist/default/production\LCD.X.production.o
+_LCD_SL C22 0 CODE 0 text4 dist/default/production\LCD.X.production.o
+_LCD_SR C3C 0 CODE 0 text3 dist/default/production\LCD.X.production.o
+start_initialization FF8 0 CODE 0 cinit dist/default/production\LCD.X.production.o
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
+_TRISB4 434 0 ABS 0 - dist/default/production\LCD.X.production.o
+_TRISB5 435 0 ABS 0 - dist/default/production\LCD.X.production.o
+__end_of_LCD_CLEAR C22 0 CODE 0 text7 dist/default/production\LCD.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\INGENI~1\AppData\Local\Temp\xcAs7c8.o
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 ABS 0 bank3 -
+LCD_WRITE_CHAR@data 74 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+LCD_WRITE_CHAR@low4 72 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+__Hcinit 1000 0 CODE 0 cinit -
+__Hidloc 4008 0 IDLOC 5 idloc -
+__Hstack 0 0 STACK 2 stack -
+__stringbase 10 0 STRING 0 strings dist/default/production\LCD.X.production.o
+__Hmaintext 0 0 ABS 0 maintext -
+LCD_WRITE_CHAR@high4 73 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+__Hcommon 0 0 ABS 0 common -
+__Hconfig 4010 0 CONFIG 4 config -
+__end_of_LCD_WRITE_STRING D10 0 CODE 0 text1 dist/default/production\LCD.X.production.o
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Lbank3 0 0 ABS 0 bank3 -
+__Lcinit FF8 0 CODE 0 cinit -
+__Lidloc 0 0 IDLOC 5 idloc -
+__Lstack 0 0 STACK 2 stack -
+_LCD_CLEAR C08 0 CODE 0 text7 dist/default/production\LCD.X.production.o
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hinit 0 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Linit 0 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Ltext 0 0 ABS 0 text -
+_LCD_SET_CORSER D96 0 CODE 0 text5 dist/default/production\LCD.X.production.o
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+_RB0 30 0 ABS 0 - dist/default/production\LCD.X.production.o
+_RB1 31 0 ABS 0 - dist/default/production\LCD.X.production.o
+_RB2 32 0 ABS 0 - dist/default/production\LCD.X.production.o
+_RB3 33 0 ABS 0 - dist/default/production\LCD.X.production.o
+_RB4 34 0 ABS 0 - dist/default/production\LCD.X.production.o
+_RB5 35 0 ABS 0 - dist/default/production\LCD.X.production.o
+__S0 800 0 ABS 0 - -
+__S1 7D 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+LCD_DATA@Data 70 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+LCD_WRITE_STRING@i 75 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+__Lintentry 0 0 CODE 0 intentry -
+__stringtab 6 0 STRING 0 strings dist/default/production\LCD.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\INGENI~1\AppData\Local\Temp\xcAs7c8.o
+__end_of_LCD_SET_CORSER E38 0 CODE 0 text5 dist/default/production\LCD.X.production.o
+__pmaintext EFC 0 CODE 0 maintext dist/default/production\LCD.X.production.o
+__Lcommon 0 0 ABS 0 common -
+__Lconfig 0 0 CONFIG 4 config -
+_LCD_CMD C56 0 CODE 0 text8 dist/default/production\LCD.X.production.o
+main@i_63 22 0 BANK0 1 cstackBANK0 dist/default/production\LCD.X.production.o
+__end_of__stringtab 12 0 STRING 0 strings dist/default/production\LCD.X.production.o
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__Lend_init 0 0 CODE 0 end_init -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+end_of_initialization FF8 0 CODE 0 cinit dist/default/production\LCD.X.production.o
+__Hintentry 0 0 CODE 0 intentry -
+__Lstrings 0 0 ABS 0 strings -
+__Hreset_vec 0 0 CODE 0 reset_vec -
+__ptext1 CC6 0 CODE 0 text1 dist/default/production\LCD.X.production.o
+__ptext2 D10 0 CODE 0 text2 dist/default/production\LCD.X.production.o
+__ptext3 C3C 0 CODE 0 text3 dist/default/production\LCD.X.production.o
+__ptext4 C22 0 CODE 0 text4 dist/default/production\LCD.X.production.o
+__ptext5 D96 0 CODE 0 text5 dist/default/production\LCD.X.production.o
+__ptext6 E38 0 CODE 0 text6 dist/default/production\LCD.X.production.o
+__ptext7 C08 0 CODE 0 text7 dist/default/production\LCD.X.production.o
+__ptext8 C56 0 CODE 0 text8 dist/default/production\LCD.X.production.o
+__ptext9 C82 0 CODE 0 text9 dist/default/production\LCD.X.production.o
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+__end_of__initialization FF8 0 CODE 0 cinit dist/default/production\LCD.X.production.o
+__Lfunctab 0 0 ENTRY 0 functab -
+__Lclrtext 0 0 ABS 0 clrtext -
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\LCD.X.production.o
+__Hend_init 6 0 CODE 0 end_init -
+__end_of_main FF8 0 CODE 0 maintext dist/default/production\LCD.X.production.o
+_TRISB 86 0 ABS 0 - dist/default/production\LCD.X.production.o
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+__initialization FF8 0 CODE 0 cinit dist/default/production\LCD.X.production.o
+__pstrings 6 0 STRING 0 strings dist/default/production\LCD.X.production.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+cinit 0 7FC FF8 4 2
+text1 0 663 CC6 25 2
+text2 0 688 D10 43 2
+text3 0 61E C3C D 2
+text4 0 611 C22 D 2
+text5 0 6CB D96 51 2
+text6 0 71C E38 62 2
+text7 0 604 C08 D 2
+text8 0 62B C56 16 2
+text9 0 641 C82 22 2
+maintext 0 77E EFC 7E 2
+cstackCOMMON 1 70 70 D 1
+cstackBANK0 1 20 20 4 1
+reset_vec 0 0 0 3 2
+strings 0 3 6 1F 2
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
